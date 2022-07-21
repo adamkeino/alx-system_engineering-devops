@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# A scrolling clock using bash
+
+Hour="0"
+Minute="1"
+while [ $Hour -lt 12 ]
+do
+	echo "Hour: $Hour"
+	while [ $Minute -lt 60 ]
+	do
+		echo $Minute
+		Minute=$((Minute+1))
+	done
+	Hour=$((Hour+1))
+	Minute="1"
+done
